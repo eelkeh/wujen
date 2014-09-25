@@ -1,0 +1,268 @@
+input.time {
+    -webkit-transition: 250ms;
+    text-align: center;
+    padding:10px;
+}
+
+input.time {
+    border-style:solid;
+    border-width: 2px;
+    border-radius: 3px;
+    font-weight:bold;
+    font-size: 22px;
+    width:80px;
+}
+
+input.time.zomby {
+    background: white;
+    color: #444;
+    border-color: #DDD;
+}
+
+input.time.error {
+    background: pink;
+    border-color: red;
+}
+
+input.time.hastime {
+    color: #111;
+    border-color: limegreen;
+}
+
+td.saved input.time {
+    border:2px solid #CCC;
+    /*border-left:1px solid green;*/
+}
+
+td.changed input.time.error {
+    background:pink;
+    border:2px solid red;
+}
+
+td.changed input.time {
+    border:2px solid aqua;
+}
+
+.main {
+    margin-top:20px;
+}
+
+.navbar {
+    margin-bottom:0;
+}
+
+.navbar-inner {
+    border-radius: 0;
+}
+
+.show-td {
+    width:85px;
+}
+
+td .controls {
+    position:absolute;
+    font-size:16px;
+}
+
+td .controls span:hover {
+    cursor: pointer;
+}
+
+td .controls .remove {
+    color:pink;
+}
+
+td .controls .repeat {
+    color:teal;
+}
+
+
+td i {
+    opacity:.3;
+    padding:3px;
+}
+
+td i.remove {
+    position:relative;
+    top:-3px;
+}
+
+td i.dupe-right {
+    position:relative;
+    top:-6px;
+}
+
+td i:hover {
+    opacity:1;
+    cursor:pointer;
+}
+
+input.title {
+    font-weight: bold;
+    border-style:solid;
+    width:160px;
+    border-width: 2px;
+    border-radius: 3px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    padding:10px;
+    font-size:22px;
+}
+
+input.tt-hint {
+    box-shadow:none;
+    border-radius:0;
+    border-width:0 0 1px 0;
+}
+input.tt-hint {
+    color:#AAA;
+    text-shadow:none;
+}
+
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+}
+
+.save-all {
+    float:right;
+}
+
+.flash {
+    background:#EEE;
+    width:100%;
+}
+
+.flash.msg {
+    padding:10px;
+}
+
+.modal.close {
+    position:absolute;
+    right:15px;
+    top:10px;
+}
+
+.modal-backdrop {
+    opacity:.1;
+}
+
+.week-bar {
+    margin-top:10px;
+    padding:5px;
+    background:#EEE;
+
+
+}
+.week-bar button {
+    float:left;
+    background:#DDD;
+    color:#333;
+    text-shadow:none    ;
+}
+
+.week-bar .date {
+    text-transform: uppercase;
+    color:#555;
+}
+
+.app-bar {
+    background: -webkit-linear-gradient(top, #5bb8fe 0%, #3eadff 100%);
+    padding:10px;
+    color:white;
+    margin-bottom:15px;
+
+}
+
+.app-bar div {
+    display:inline-block;
+}
+
+.theweek {
+    width:400px;
+    margin:auto;
+    text-align:center;
+}
+
+.theweek h4 {
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
+
+.theweek .dates {
+    display:inline-block;
+    margin:0 15px;
+}
+
+.theweek .start {
+    padding-bottom:7px;
+    border-bottom:2px solid #111;
+    clear:both;
+}
+.theweek .end {
+    padding-top:5px;
+}
+
+.theweek button {
+    color:#888;
+    background:none;
+    box-shadow:none;
+    position:relative;
+    top:-15px;
+    display:inline-block;
+}
+
+.theweek button:hover {
+    background:none;
+}
+
+table {
+    margin-top:15px;
+}
+
+.btn {
+    /*color:white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+    background: linear-gradient(to bottom, #24a828 0%, #1b7e1e 100%);
+    border: none;
+    padding: 8px 16px;
+    &:hover {
+        background: linear-gradient(to bottom, #24a828 0%, #1b7e1e 100%);
+    }*/
+}
+
+.btn h4 {
+    margin:0;
+}
+
+th {
+    background:#EEE;
+    color:#444;
+    font-size:18px;
+}
+
+.table-striped tbody > tr > td.title-td {
+    background:rgb(229,244,255);
+    border-right:1px solid #DDD;
+}
+
+
+#loading {
+    font-size:24px;
+    font-weight:bold;
+    opacity:0;
+    -webkit-transition: all 200ms;
+    position:fixed;
+    left:45%;
+    top:45%;
+    background:white;
+    padding:10px;
+    border-radius:5px;
+
+}
+
+#loading.in {
+    opacity:1;
+}
+

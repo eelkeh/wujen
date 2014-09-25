@@ -1,0 +1,22 @@
+
+            <h4 data-bind="text: currentWeek.start" class="date start"></h4><br>
+            <h4 data-bind="text: lastDay" class="date end">eind</h4><br>
+        // this.firstDay = ko.computed(function() {
+        //     var first;
+        //     _.some(this.slots(), function(slot) {
+        //         first = _.first(_.first(slot.shows))
+        //                     ._date.format('dddd D MMMM');
+        //         return true;
+        //     });
+        //     return first;
+        // }, this);
+
+        // this.lastDay = ko.computed(function() {
+        //     var last;
+        //     _.some(this.slots(), function(slot) {
+        //         last = _.last(_.first(slot.shows))
+        //                     ._date.format('dddd D MMMM');
+        //         return true;
+        //     });
+        //     return last;
+        // }, this);

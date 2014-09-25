@@ -1,0 +1,99 @@
+<html>
+<body>
+    <head>
+        <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="knockout-3.1.0.js"></script>
+        <script type="text/javascript" src="typeahead.bundle.js"></script>
+        <script type="text/javascript" src="underscore-min.js"></script>
+        <script type="text/javascript" src="moment-with-langs.min.js"></script>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+
+    <div class="theweek">
+        <button class="prev-week btn"><i class="icon-chevron-left"></i> Vorige</button>
+        <div class="dates">
+            <h4 data-bind="text: prettyStartDate" class="date start"></h4><br>
+            <h4 data-bind="text: prettyEndDate" class="date end">eind</h4><br>
+        </div>
+        <button class="next-week btn">Volgende <i class="icon-chevron-right"></i></button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Do</th>
+                <th>Vr</th>
+                <th>Za</th>
+                <th>Zo</th>
+                <th>Ma</th>
+                <th>Di</th>
+                <th>Wo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: {data: slots, as: 'slot'} -->
+                <!-- ko foreach: slot.shows -->
+                <tr>
+                    <td>
+                        <input class="title" data-bind="
+                                value: slot.title,
+                                event: { blur: $root.setRowTitle },
+                                escapeKey: $root.setRowTitle,
+                                enterKey: $root.setRowTitle">
+                        <div class="controls">
+                            <span data-bind="click: $root.removeRow.bind($data, slot.title(), $index())"
+                                class="remove glyphicon glyphicon-remove"></span>
+                        </div>
+                    </td>
+                    <!-- ko foreach: $data -->
+                        <td>
+                            <input class="time" data-bind="
+                                value: $data.time
+                                escapeKey: $root.timeAutoComplete,
+                                enterKey: $root.timeAutoComplete,
+                                arrowUp: $root.timeAdd,
+                                arrowDown: $root.timeSubtract,
+                                event: { blur: $root.timeAutoComplete, focus: $root.onFocus },
+                                css: { zomby: $data.zomby(), hastime: $data.showtime(), error: $data.inputError() }">
+                            <div class="controls">
+                                <span data-bind="click: $root.repeat.bind($data, $parent)"
+                                    class="repeat glyphicon glyphicon-arrow-right"></span>
+                                <span data-bind="click: $root.remove"
+                                    class="remove glyphicon glyphicon-remove"></span>
+                            </div>
+                        </td>
+                    <!-- /ko -->
+                </tr>
+                <!-- /ko -->
+            <!-- /ko -->
+        </tbody>
+    </table>
+
+
+    <button data-bind="click: $root.addRow" type="button" class="btn btn-default">+</button>
+
+ <!--    <h1 data-bind="text: junk"></h1>
+        <div data-bind="foreach: {data: slots, as: 'slot'}">
+            <h3 data-bind="text: slot.title"></h3>
+            <div data-bind="foreach: {data: slot.shows, as: 'row'}">
+                <ul data-bind="foreach: {data: row, as: 'show'}">
+                    <li>
+                        <input type="text"
+                            data-bind="value: show.time,
+                                        enterKey: $root.saveEditing,
+                                        arrowUp: $root.timeAdd,
+                                        arrowDown: $root.timeSubtract,
+                                        event: { blur: $root.timeAutoComplete },
+                                        css: { zomby: show.zomby() }">
+                        </input>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+    <script type="text/javascript" src="_app.js"></script>
+</body>
+</html>
